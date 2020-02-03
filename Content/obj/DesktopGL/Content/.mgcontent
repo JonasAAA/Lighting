@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Profile>Reach</Profile>
+  <Platform>DesktopGL</Platform>
+  <Config />
+  <SourceFiles>
+    <File>C:/Users/Jonas/Desktop/Game1/Content/back.png</File>
+    <File>C:/Users/Jonas/Desktop/Game1/Content/disk.png</File>
+    <File>C:/Users/Jonas/Desktop/Game1/Content/exit.png</File>
+    <File>C:/Users/Jonas/Desktop/Game1/Content/how to play.png</File>
+    <File>C:/Users/Jonas/Desktop/Game1/Content/new game.png</File>
+    <File>C:/Users/Jonas/Desktop/Game1/Content/pixel.png</File>
+    <File>C:/Users/Jonas/Desktop/Game1/Content/restart.png</File>
+    <File>C:/Users/Jonas/Desktop/Game1/Content/you lose.png</File>
+    <File>C:/Users/Jonas/Desktop/Game1/Content/you win.png</File>
+  </SourceFiles>
+  <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+  </DestFiles>
+</SourceFileCollection>
