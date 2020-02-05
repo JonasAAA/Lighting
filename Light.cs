@@ -36,25 +36,6 @@ namespace Game1
 
         public virtual void Update(float elapsed)
         {
-            {
-                //float maxMoveDist = 200;
-                //KeyboardState keyState = Keyboard.GetState();
-                //Vector2 moveDir = Vector2.Zero;
-
-                //if (keyState.IsKeyDown(Keys.W))
-                //    moveDir.Y--;
-                //if (keyState.IsKeyDown(Keys.A))
-                //    moveDir.X--;
-                //if (keyState.IsKeyDown(Keys.S))
-                //    moveDir.Y++;
-                //if (keyState.IsKeyDown(Keys.D))
-                //    moveDir.X++;
-
-                //if (moveDir != Vector2.Zero)
-                //    moveDir.Normalize();
-
-                //position += moveDir * maxMoveDist * 1 / 60f;
-            }
             List<float> angles = new List<float>();
             foreach (var castObject in castObjects)
                 castObject.RelAngles(position, angles);
@@ -124,45 +105,5 @@ namespace Game1
                     angles.Add(prepAngles[i]);
             }
         }
-
-        //public void Update()
-        //{
-        //    int angleCount = 10000;
-        //    List<float> angles = new List<float>();
-        //    for (int i = 0; i < angleCount; i++)
-        //        angles.Add(MathHelper.WrapAngle(i * MathHelper.TwoPi / angleCount));
-
-        //    int centerInd = angles.Count;
-
-        //    vertPosCol = new VertexPositionColor[angles.Count + 1];
-        //    vertPosCol[centerInd].Position = Transform(lightSource);
-
-        //    float maxDist = 2000;
-        //    for (int i = 0; i < angles.Count; i++)
-        //    {
-        //        float angle = angles[i];
-        //        Vector2 dir = new Vector2((float)Math.Cos(angle), (float)Math.Sin(angle));
-        //        float dist = maxDist;
-        //        foreach (var castObject in castObjects)
-        //        {
-        //            float? curDist = castObject.InterPoint(lightSource, dir);
-        //            if (curDist.HasValue && curDist.Value < dist)
-        //                dist = curDist.Value;
-        //        }
-        //        vertPosCol[i].Position = Transform(lightSource - dist * dir);
-        //    }
-
-        //    for (int i = 0; i < vertPosCol.Count(); i++)
-        //        vertPosCol[i].Color = Color.White;
-
-        //    ind = new int[angles.Count * 3];
-        //    for (int i = 0; i < angles.Count; i++)
-        //    {
-        //        // may need to swap the last two
-        //        ind[3 * i] = centerInd;
-        //        ind[3 * i + 1] = i;
-        //        ind[3 * i + 2] = (i + 1) % angles.Count;
-        //    }
-        //}
     }
 }

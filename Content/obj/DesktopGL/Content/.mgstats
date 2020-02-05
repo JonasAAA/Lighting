@@ -1,10 +1,11 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
-"C:/Users/Jonas/Desktop/Game1/Content/back.png","C:/Users/Jonas/Desktop/Game1/Content/bin/DesktopGL/Content/back.xnb","TextureProcessor","Texture2DContent",1068,45757,0.2545015
-"C:/Users/Jonas/Desktop/Game1/Content/disk.png","C:/Users/Jonas/Desktop/Game1/Content/bin/DesktopGL/Content/disk.xnb","TextureProcessor","Texture2DContent",4512,1048661,0.140593
-"C:/Users/Jonas/Desktop/Game1/Content/exit.png","C:/Users/Jonas/Desktop/Game1/Content/bin/DesktopGL/Content/exit.xnb","TextureProcessor","Texture2DContent",730,33349,0
-"C:/Users/Jonas/Desktop/Game1/Content/how to play.png","C:/Users/Jonas/Desktop/Game1/Content/bin/DesktopGL/Content/how to play.xnb","TextureProcessor","Texture2DContent",1862,149653,0.0155859
-"C:/Users/Jonas/Desktop/Game1/Content/new game.png","C:/Users/Jonas/Desktop/Game1/Content/bin/DesktopGL/Content/new game.xnb","TextureProcessor","Texture2DContent",2015,125509,0.022826
-"C:/Users/Jonas/Desktop/Game1/Content/pixel.png","C:/Users/Jonas/Desktop/Game1/Content/bin/DesktopGL/Content/pixel.xnb","TextureProcessor","Texture2DContent",119,89,0.1093848
-"C:/Users/Jonas/Desktop/Game1/Content/restart.png","C:/Users/Jonas/Desktop/Game1/Content/bin/DesktopGL/Content/restart.xnb","TextureProcessor","Texture2DContent",1337,66053,0.0156603
-"C:/Users/Jonas/Desktop/Game1/Content/you lose.png","C:/Users/Jonas/Desktop/Game1/Content/bin/DesktopGL/Content/you lose.xnb","TextureProcessor","Texture2DContent",1467,83509,0
-"C:/Users/Jonas/Desktop/Game1/Content/you win.png","C:/Users/Jonas/Desktop/Game1/Content/bin/DesktopGL/Content/you win.xnb","TextureProcessor","Texture2DContent",1261,74929,0.0155868
+"C:/Users/Jonas/Desktop/Lighting/Content/back.png","C:/Users/Jonas/Desktop/Lighting/Content/bin/DesktopGL/Content/back.xnb","TextureProcessor","Texture2DContent",1068,45757,0.429291
+"C:/Users/Jonas/Desktop/Lighting/Content/disk.png","C:/Users/Jonas/Desktop/Lighting/Content/bin/DesktopGL/Content/disk.xnb","TextureProcessor","Texture2DContent",4512,1048661,0.0328934
+"C:/Users/Jonas/Desktop/Lighting/Content/exit.png","C:/Users/Jonas/Desktop/Lighting/Content/bin/DesktopGL/Content/exit.xnb","TextureProcessor","Texture2DContent",730,33349,0.0089393
+"C:/Users/Jonas/Desktop/Lighting/Content/how to play.png","C:/Users/Jonas/Desktop/Lighting/Content/bin/DesktopGL/Content/how to play.xnb","TextureProcessor","Texture2DContent",1862,149653,0.0110102
+"C:/Users/Jonas/Desktop/Lighting/Content/new game.png","C:/Users/Jonas/Desktop/Lighting/Content/bin/DesktopGL/Content/new game.xnb","TextureProcessor","Texture2DContent",2015,125509,0.0109623
+"C:/Users/Jonas/Desktop/Lighting/Content/pixel.png","C:/Users/Jonas/Desktop/Lighting/Content/bin/DesktopGL/Content/pixel.xnb","TextureProcessor","Texture2DContent",119,89,0.0059887
+"C:/Users/Jonas/Desktop/Lighting/Content/random background.png","C:/Users/Jonas/Desktop/Lighting/Content/bin/DesktopGL/Content/random background.xnb","TextureProcessor","Texture2DContent",281605,8294485,0.2995367
+"C:/Users/Jonas/Desktop/Lighting/Content/restart.png","C:/Users/Jonas/Desktop/Lighting/Content/bin/DesktopGL/Content/restart.xnb","TextureProcessor","Texture2DContent",1337,66053,0.0099375
+"C:/Users/Jonas/Desktop/Lighting/Content/you lose.png","C:/Users/Jonas/Desktop/Lighting/Content/bin/DesktopGL/Content/you lose.xnb","TextureProcessor","Texture2DContent",1467,83509,0.0099741
+"C:/Users/Jonas/Desktop/Lighting/Content/you win.png","C:/Users/Jonas/Desktop/Lighting/Content/bin/DesktopGL/Content/you win.xnb","TextureProcessor","Texture2DContent",1261,74929,0.0119879

@@ -35,11 +35,14 @@ namespace Game1
             graphics.PreferredBackBufferWidth = C.screenWidth;
             graphics.PreferredBackBufferHeight = C.screenHeight;
             graphics.IsFullScreen = true;
+
+            LightPolygon.EarlyInitialize(graphics);
         }
 
         protected override void LoadContent()
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
+            PlayStateUnused.Initialize(GraphicsDevice, Content);
             PlayState.Initialize(GraphicsDevice, Content);
             Button.Initialize(Content, Color.White, Color.Yellow);
 

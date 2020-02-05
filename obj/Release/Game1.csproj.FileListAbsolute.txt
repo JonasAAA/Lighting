@@ -1,0 +1,28 @@
+C:\Users\Jonas\Desktop\Lighting\bin\DesktopGL\AnyCPU\Release\MonoGame.Framework.dll.config
+C:\Users\Jonas\Desktop\Lighting\bin\DesktopGL\AnyCPU\Release\Content\back.xnb
+C:\Users\Jonas\Desktop\Lighting\bin\DesktopGL\AnyCPU\Release\Content\disk.xnb
+C:\Users\Jonas\Desktop\Lighting\bin\DesktopGL\AnyCPU\Release\Content\exit.xnb
+C:\Users\Jonas\Desktop\Lighting\bin\DesktopGL\AnyCPU\Release\Content\how to play.xnb
+C:\Users\Jonas\Desktop\Lighting\bin\DesktopGL\AnyCPU\Release\Content\new game.xnb
+C:\Users\Jonas\Desktop\Lighting\bin\DesktopGL\AnyCPU\Release\Content\pixel.xnb
+C:\Users\Jonas\Desktop\Lighting\bin\DesktopGL\AnyCPU\Release\Content\random background.xnb
+C:\Users\Jonas\Desktop\Lighting\bin\DesktopGL\AnyCPU\Release\Content\restart.xnb
+C:\Users\Jonas\Desktop\Lighting\bin\DesktopGL\AnyCPU\Release\Content\you lose.xnb
+C:\Users\Jonas\Desktop\Lighting\bin\DesktopGL\AnyCPU\Release\Content\you win.xnb
+C:\Users\Jonas\Desktop\Lighting\bin\DesktopGL\AnyCPU\Release\x86\SDL2.dll
+C:\Users\Jonas\Desktop\Lighting\bin\DesktopGL\AnyCPU\Release\x64\SDL2.dll
+C:\Users\Jonas\Desktop\Lighting\bin\DesktopGL\AnyCPU\Release\x86\soft_oal.dll
+C:\Users\Jonas\Desktop\Lighting\bin\DesktopGL\AnyCPU\Release\x64\soft_oal.dll
+C:\Users\Jonas\Desktop\Lighting\bin\DesktopGL\AnyCPU\Release\x86\libSDL2-2.0.so.0
+C:\Users\Jonas\Desktop\Lighting\bin\DesktopGL\AnyCPU\Release\x64\libSDL2-2.0.so.0
+C:\Users\Jonas\Desktop\Lighting\bin\DesktopGL\AnyCPU\Release\x86\libopenal.so.1
+C:\Users\Jonas\Desktop\Lighting\bin\DesktopGL\AnyCPU\Release\x64\libopenal.so.1
+C:\Users\Jonas\Desktop\Lighting\bin\DesktopGL\AnyCPU\Release\libSDL2-2.0.0.dylib
+C:\Users\Jonas\Desktop\Lighting\bin\DesktopGL\AnyCPU\Release\libopenal.1.dylib
+C:\Users\Jonas\Desktop\Lighting\bin\DesktopGL\AnyCPU\Release\Game1.exe
+C:\Users\Jonas\Desktop\Lighting\bin\DesktopGL\AnyCPU\Release\Game1.pdb
+C:\Users\Jonas\Desktop\Lighting\bin\DesktopGL\AnyCPU\Release\MonoGame.Framework.dll
+C:\Users\Jonas\Desktop\Lighting\obj\Release\Game1.csprojAssemblyReference.cache
+C:\Users\Jonas\Desktop\Lighting\obj\Release\Game1.csproj.CopyComplete
+C:\Users\Jonas\Desktop\Lighting\obj\Release\Game1.exe
+C:\Users\Jonas\Desktop\Lighting\obj\Release\Game1.pdb

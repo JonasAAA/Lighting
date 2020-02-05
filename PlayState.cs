@@ -16,11 +16,13 @@ namespace Game1
         private readonly List<Light> lights;
         private readonly List<IObstacle> obstacles;
         private readonly LightDiskPlayer player;
+        private readonly Background background;
 
         public static void Initialize(GraphicsDevice GraphicsDevice, ContentManager Content)
         {
             camera = new Camera();
 
+            LightPolygonUnused.Initialize(GraphicsDevice, camera);
             LightPolygon.Initialize(GraphicsDevice, camera);
             EdgelessPolygon.Initialize(GraphicsDevice, camera);
             Image.Initialize(Content);
@@ -30,7 +32,7 @@ namespace Game1
         {
             HasWon = false;
             HasLost = false;
-            
+
             player = new LightDiskPlayer(new Vector2(600, 600), 16, 0, Keys.Up, Keys.Left, Keys.Down, Keys.Right, Color.Black * 0f, 1f, new Color(0, 255, 0));
 
             obstacles = new List<IObstacle>()
@@ -43,10 +45,10 @@ namespace Game1
 
             lights = new List<Light>()
             {
-                player.light,
-                new Light(new Vector2(1920/2, 1080/2), 2f, Color.White),
-                new RotatingLight(new Vector2(1920/2, 400), MathHelper.TwoPi * 0.75f, MathHelper.Pi * 0.125f, 1f, 2f, new Color(255, 0, 0)),
+                new Light(new Vector2(1920/2, 1080/2), 0.5f, Color.White),
+                new RotatingLight(new Vector2(1920/2, 300), MathHelper.TwoPi * 0.75f, MathHelper.Pi * 0.125f, 1f, 1f, new Color(255, 0, 0)),
                 new Light(new Vector2(1920, 1080/2), 1f, new Color(0, 0, 255)),
+                player.light,
             };
 
             foreach (Light light in lights)
@@ -57,6 +59,8 @@ namespace Game1
                 foreach (IObstacle obstacle in obstacles)
                     light.AddObject(obstacle);
             }
+
+            background = new Background(new Point(C.screenWidth / 2, C.screenHeight / 2), "random background", Color.White);
         }
 
         public void Update(float elapsed)
@@ -74,8 +78,16 @@ namespace Game1
 
         public void Draw(SpriteBatch spriteBatch)
         {
+            camera.BeginDraw(spriteBatch);
+            background.Draw(spriteBatch);
+            spriteBatch.End();
+
+            LightPolygon.BeginDraw();
+
             foreach (Light light in lights)
                 light.Draw();
+
+            LightPolygon.EndDraw(spriteBatch);
 
             camera.BeginDraw(spriteBatch);
 

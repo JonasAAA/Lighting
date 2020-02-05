@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/Users/Jonas/Desktop/Game1/Content/how to play.png</SourceFile>
+  <SourceFile>C:/Users/Jonas/Desktop/Lighting/Content/how to play.png</SourceFile>
   <SourceTime>2019-12-06T19:18:54.2465058+00:00</SourceTime>
-  <DestFile>C:/Users/Jonas/Desktop/Game1/Content/bin/DesktopGL/Content/how to play.xnb</DestFile>
-  <DestTime>2020-02-01T21:36:48.4717666+00:00</DestTime>
+  <DestFile>C:/Users/Jonas/Desktop/Lighting/Content/bin/DesktopGL/Content/how to play.xnb</DestFile>
+  <DestTime>2020-02-03T21:25:29.9370323+00:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2018-12-08T16:35:54+00:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
