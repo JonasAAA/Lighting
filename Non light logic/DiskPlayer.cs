@@ -35,7 +35,7 @@ namespace Game1
             if (moveDir != Vector2.Zero)
                 moveDir.Normalize();
 
-            position += moveDir * maxMoveDist * elapsed;
+            Position += moveDir * maxMoveDist * elapsed;
         }
     }
 }

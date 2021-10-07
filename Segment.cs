@@ -38,14 +38,28 @@ namespace Game1
 
         public void RelAngles(Vector2 lightPos, List<float> relAngles)
         {
-            startDisk.RelAngles(lightPos, relAngles);
-            endDisk.RelAngles(lightPos, relAngles);
+            if (radius >= 1.5f)
+            {
+                startDisk.RelAngles(lightPos, relAngles);
+                endDisk.RelAngles(lightPos, relAngles);
+            }
+            else
+            {
+                Vector2 startRelPos = startPos - lightPos,
+                        endRelPos = startPos + length * dir - lightPos;
+                relAngles.Add((float)Math.Atan2(startRelPos.Y, startRelPos.X));
+                relAngles.Add((float)Math.Atan2(endRelPos.Y, endRelPos.X));
+            }
         }
 
         public void InterPoint(Vector2 lightPos, Vector2 lightDir, List<float> interPoints)
         {
-            startDisk.InterPoint(lightPos, lightDir, interPoints);
-            endDisk.InterPoint(lightPos, lightDir, interPoints);
+            if (radius >= 1.5f)
+            {
+                startDisk.InterPoint(lightPos, lightDir, interPoints);
+                endDisk.InterPoint(lightPos, lightDir, interPoints);
+            }
+
             float a = dir.X,
                   b = -lightDir.X,
                   c = lightPos.X - startPos.X,
@@ -62,15 +76,22 @@ namespace Game1
             if (det == 0)
                 return;
 
-            float t1 = (c * e - b * f) / det;
-                  //t2 = (a * f - c * d) / det;
+            float t1 = (c * e - b * f) / det,
+                  t2 = (a * f - c * d) / det;
 
             if (t1 < 0 || t1 > length)
                 return;
 
-            // this is not exactly correct but should be close enough
-            Disk temporary = new Disk(startPos + dir * t1, radius, 0, "disk", image.color);
-            temporary.InterPoint(lightPos, lightDir, interPoints);
+            if (radius >= 1.5f)
+            {
+                // this is not exactly correct but should be close enough
+                Disk temporary = new Disk(startPos + dir * t1, radius, 0, "disk", image.color);
+                temporary.InterPoint(lightPos, lightDir, interPoints);
+            }
+            else
+            {
+                interPoints.Add(t2);
+            }
         }
     }
 }

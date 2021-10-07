@@ -7,14 +7,18 @@ namespace Game1
 {
     public class Disk : IShadowCastingObject
     {
-        public Vector2 position;
+        public virtual Vector2 Position
+        {
+            get;
+            set;
+        }
         public float radius, rotation;
 
         private readonly Image image;
 
         public Disk(Vector2 position, float radius, float rotation, string imageName, Color color)
         {
-            this.position = position;
+            Position = position;
             this.radius = radius;
 
             this.rotation = rotation;
@@ -24,19 +28,19 @@ namespace Game1
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            image.Draw(spriteBatch, position, rotation);
+            image.Draw(spriteBatch, Position, rotation);
         }
 
         public void RelAngles(Vector2 lightPos, List<float> relAngles)
         {
-            float dist = Vector2.Distance(lightPos, position);
+            float dist = Vector2.Distance(lightPos, Position);
             if (dist <= radius)
                 return;
 
-            float a = radius / Vector2.Distance(lightPos, position),
+            float a = radius / Vector2.Distance(lightPos, Position),
                   b = (float)Math.Sqrt(1 - a * a);
-            Vector2 center = position * b * b + lightPos * a * a,
-                    diff = position - lightPos,
+            Vector2 center = Position * b * b + lightPos * a * a,
+                    diff = Position - lightPos,
                     orth = new Vector2(diff.Y, -diff.X),
                     point1 = center + orth * a * b - lightPos,
                     point2 = center - orth * a * b - lightPos;
@@ -59,7 +63,7 @@ namespace Game1
             //if (dist <= radius)
             //    return;
 
-            Vector2 d = lightPos - position;
+            Vector2 d = lightPos - Position;
             float e = Vector2.Dot(lightDir, d), f = Vector2.Dot(d, d) - radius * radius, g = e * e - f;
             if (g < 0)
                 return;
@@ -69,8 +73,8 @@ namespace Game1
             if (float.IsNaN(h))
                 return;
 
-            interPoints.Add(-e + h);
-            interPoints.Add(-e - h);
+            interPoints.Add(-e + h + 1f);
+            interPoints.Add(-e - h + 1f);
         }
     }
 }

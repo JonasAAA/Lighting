@@ -34,9 +34,9 @@ namespace Game1
 
             graphics.PreferredBackBufferWidth = C.screenWidth;
             graphics.PreferredBackBufferHeight = C.screenHeight;
-            graphics.IsFullScreen = true;
+            //graphics.IsFullScreen = true;
 
-            LightPolygon.EarlyInitialize(graphics);
+            PlayState.EarlyInitialize(graphics);
         }
 
         protected override void LoadContent()
@@ -127,7 +127,7 @@ namespace Game1
 
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.Black);
+            GraphicsDevice.Clear(Color.White);
 
             switch (gameState)
             {

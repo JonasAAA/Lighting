@@ -10,13 +10,13 @@ namespace Game1
 
         public void Collide(DiskPlayer player)
         {
-            if (Vector2.Distance(position, player.position) >= radius + player.radius)
+            if (Vector2.Distance(Position, player.Position) >= radius + player.radius)
                 return;
 
-            Vector2 dir = player.position - position;
+            Vector2 dir = player.Position - Position;
             dir.Normalize();
 
-            player.position = position + dir * (radius + player.radius);
+            player.Position = Position + dir * (radius + player.radius);
             //player.velocity -= dir * Vector2.Dot(dir, player.velocity);
         }
     }

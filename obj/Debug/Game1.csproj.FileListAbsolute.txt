@@ -53,3 +53,31 @@ C:\Users\Jonas\Desktop\Lighting\obj\Debug\Game1.csproj.CopyComplete
 C:\Users\Jonas\Desktop\Lighting\obj\Debug\Game1.exe
 C:\Users\Jonas\Desktop\Lighting\obj\Debug\Game1.pdb
 C:\Users\Jonas\Desktop\Lighting\bin\DesktopGL\AnyCPU\Debug\Content\random background.xnb
+C:\Users\Jonas\Desktop\home\Lighting\bin\DesktopGL\AnyCPU\Debug\x86\SDL2.dll
+C:\Users\Jonas\Desktop\home\Lighting\bin\DesktopGL\AnyCPU\Debug\x64\SDL2.dll
+C:\Users\Jonas\Desktop\home\Lighting\bin\DesktopGL\AnyCPU\Debug\x86\soft_oal.dll
+C:\Users\Jonas\Desktop\home\Lighting\bin\DesktopGL\AnyCPU\Debug\x64\soft_oal.dll
+C:\Users\Jonas\Desktop\home\Lighting\bin\DesktopGL\AnyCPU\Debug\x86\libSDL2-2.0.so.0
+C:\Users\Jonas\Desktop\home\Lighting\bin\DesktopGL\AnyCPU\Debug\x64\libSDL2-2.0.so.0
+C:\Users\Jonas\Desktop\home\Lighting\bin\DesktopGL\AnyCPU\Debug\x86\libopenal.so.1
+C:\Users\Jonas\Desktop\home\Lighting\bin\DesktopGL\AnyCPU\Debug\x64\libopenal.so.1
+C:\Users\Jonas\Desktop\home\Lighting\bin\DesktopGL\AnyCPU\Debug\libSDL2-2.0.0.dylib
+C:\Users\Jonas\Desktop\home\Lighting\bin\DesktopGL\AnyCPU\Debug\libopenal.1.dylib
+C:\Users\Jonas\Desktop\home\Lighting\bin\DesktopGL\AnyCPU\Debug\MonoGame.Framework.dll.config
+C:\Users\Jonas\Desktop\home\Lighting\bin\DesktopGL\AnyCPU\Debug\Content\back.xnb
+C:\Users\Jonas\Desktop\home\Lighting\bin\DesktopGL\AnyCPU\Debug\Content\disk.xnb
+C:\Users\Jonas\Desktop\home\Lighting\bin\DesktopGL\AnyCPU\Debug\Content\exit.xnb
+C:\Users\Jonas\Desktop\home\Lighting\bin\DesktopGL\AnyCPU\Debug\Content\how to play.xnb
+C:\Users\Jonas\Desktop\home\Lighting\bin\DesktopGL\AnyCPU\Debug\Content\new game.xnb
+C:\Users\Jonas\Desktop\home\Lighting\bin\DesktopGL\AnyCPU\Debug\Content\pixel.xnb
+C:\Users\Jonas\Desktop\home\Lighting\bin\DesktopGL\AnyCPU\Debug\Content\random background.xnb
+C:\Users\Jonas\Desktop\home\Lighting\bin\DesktopGL\AnyCPU\Debug\Content\restart.xnb
+C:\Users\Jonas\Desktop\home\Lighting\bin\DesktopGL\AnyCPU\Debug\Content\you lose.xnb
+C:\Users\Jonas\Desktop\home\Lighting\bin\DesktopGL\AnyCPU\Debug\Content\you win.xnb
+C:\Users\Jonas\Desktop\home\Lighting\bin\DesktopGL\AnyCPU\Debug\Game1.exe
+C:\Users\Jonas\Desktop\home\Lighting\bin\DesktopGL\AnyCPU\Debug\Game1.pdb
+C:\Users\Jonas\Desktop\home\Lighting\bin\DesktopGL\AnyCPU\Debug\MonoGame.Framework.dll
+C:\Users\Jonas\Desktop\home\Lighting\obj\Debug\Game1.csproj.AssemblyReference.cache
+C:\Users\Jonas\Desktop\home\Lighting\obj\Debug\Game1.csproj.CoreCompileInputs.cache
+C:\Users\Jonas\Desktop\home\Lighting\obj\Debug\Game1.exe
+C:\Users\Jonas\Desktop\home\Lighting\obj\Debug\Game1.pdb

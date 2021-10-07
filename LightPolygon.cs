@@ -115,7 +115,7 @@ namespace Game1
 
             GraphicsDevice.BlendState = BlendState.NonPremultiplied;
 
-            GraphicsDevice.BlendState = BlendState.AlphaBlend;
+            //GraphicsDevice.BlendState = BlendState.AlphaBlend;
 
             foreach (EffectPass effectPass in basicEffect.CurrentTechnique.Passes)
             {

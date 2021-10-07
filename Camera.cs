@@ -15,12 +15,12 @@ namespace Game1
             scale = 1;
         }
 
-        public void Update(DiskPlayer player)
+        public void Update(Vector2 center, float rotation = 0/*DiskPlayer player*/)
         {
             Transform = Matrix.CreateTranslation(C.screenWidth * 0.5f, C.screenHeight * 0.5f, 0)
-                        //* Matrix.CreateRotationZ(player.rotation)
+                        * Matrix.CreateRotationZ(rotation)
                         * Matrix.CreateScale(scale)
-                        * Matrix.CreateTranslation(-player.position.X, -player.position.Y, 0);
+                        * Matrix.CreateTranslation(-center.X, -center.Y, 0);
         }
 
         public void BeginDraw(SpriteBatch spriteBatch)

@@ -42,34 +42,34 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Background.cs" />
-    <Compile Include="Button.cs" />
+    <Compile Include="Non light logic\Background.cs" />
+    <Compile Include="Non light logic\Button.cs" />
     <Compile Include="C.cs" />
     <Compile Include="Camera.cs" />
     <Compile Include="Disk.cs" />
-    <Compile Include="DiskObst.cs" />
+    <Compile Include="Non light logic\DiskObst.cs" />
     <Compile Include="EdgelessPolygon.cs" />
-    <Compile Include="LightPolygonUnused.cs" />
-    <Compile Include="Game1.cs" />
+    <Compile Include="Non light logic\LightPolygonUnused.cs" />
+    <Compile Include="Non light logic\Game1.cs" />
     <Compile Include="Image.cs" />
-    <Compile Include="IObstacle.cs" />
+    <Compile Include="Non light logic\IObstacle.cs" />
     <Compile Include="Light.cs" />
-    <Compile Include="LightDiskPlayer.cs" />
+    <Compile Include="Non light logic\LightDiskPlayer.cs" />
     <Compile Include="LightPolygon.cs" />
-    <Compile Include="LoseState.cs" />
-    <Compile Include="MenuState.cs" />
-    <Compile Include="DiskPlayer.cs" />
-    <Compile Include="PlayStateUnused.cs" />
-    <Compile Include="PlayState.cs" />
+    <Compile Include="Non light logic\LoseState.cs" />
+    <Compile Include="Non light logic\MenuState.cs" />
+    <Compile Include="Non light logic\DiskPlayer.cs" />
+    <Compile Include="Non light logic\PlayStateUnused.cs" />
+    <Compile Include="Non light logic\PlayState.cs" />
     <Compile Include="Polygon.cs" />
-    <Compile Include="PolygonObst.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Non light logic\PolygonObst.cs" />
+    <Compile Include="Non light logic\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RotatingLight.cs" />
     <Compile Include="Segment.cs" />
     <Compile Include="IShadowCastingObject.cs" />
-    <Compile Include="SegmentObst.cs" />
-    <Compile Include="WinState.cs" />
+    <Compile Include="Non light logic\SegmentObst.cs" />
+    <Compile Include="Non light logic\WinState.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Framework">
@@ -130,6 +130,7 @@
     </None>
     <None Include="app.manifest" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

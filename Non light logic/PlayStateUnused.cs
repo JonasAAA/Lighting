@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Game1
 {
-    public class PlayState
+    public class PlayStateUnused
     {
         private static Camera camera;
 
@@ -23,16 +23,15 @@ namespace Game1
             camera = new Camera();
 
             LightPolygonUnused.Initialize(GraphicsDevice, camera);
-            LightPolygon.Initialize(GraphicsDevice, camera);
             EdgelessPolygon.Initialize(GraphicsDevice, camera);
             Image.Initialize(Content);
         }
 
-        public PlayState()
+        public PlayStateUnused()
         {
             HasWon = false;
             HasLost = false;
-
+            
             player = new LightDiskPlayer(new Vector2(600, 600), 16, 0, Keys.Up, Keys.Left, Keys.Down, Keys.Right, Color.Black * 0f, 1f, new Color(0, 255, 0));
 
             obstacles = new List<IObstacle>()
@@ -45,9 +44,9 @@ namespace Game1
 
             lights = new List<Light>()
             {
-                new Light(new Vector2(1920/2, 1080/2), 0.5f, Color.White),
-                new RotatingLight(new Vector2(1920/2, 300), MathHelper.TwoPi * 0.75f, MathHelper.Pi * 0.125f, 1f, 1f, new Color(255, 0, 0)),
-                new Light(new Vector2(1920, 1080/2), 1f, new Color(0, 0, 255)),
+                new Light(new Vector2(1920/2, 1080/2), 2f, Color.White),
+                new RotatingLight(new Vector2(1920/2, 0), MathHelper.TwoPi * 0.75f, MathHelper.Pi * 0.125f, 1f, 2f, new Color(255, 0, 0)),
+                new Light(new Vector2(1920, 1080/2), 2f, new Color(0, 0, 255)),
                 player.light,
             };
 
@@ -70,7 +69,7 @@ namespace Game1
             foreach (IObstacle obstacle in obstacles)
                 obstacle.Collide(player);
 
-            camera.Update(player);
+            camera.Update(player.Position);
 
             foreach (Light light in lights)
                 light.Update(elapsed);
@@ -78,16 +77,30 @@ namespace Game1
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            camera.BeginDraw(spriteBatch);
-            background.Draw(spriteBatch);
-            spriteBatch.End();
 
-            LightPolygon.BeginDraw();
 
             foreach (Light light in lights)
                 light.Draw();
 
-            LightPolygon.EndDraw(spriteBatch);
+            //BlendState blendState = new BlendState()
+            //{
+            //    BlendFactor = Color.White, //BlendState.NonPremultiplied.BlendFactor,
+            //    ColorBlendFunction = BlendFunction.Add, //BlendFunction.Add, //BlendState.NonPremultiplied.ColorBlendFunction,
+            //    ColorDestinationBlend = Blend.DestinationAlpha, //Blend.InverseSourceAlpha, //BlendState.NonPremultiplied.ColorDestinationBlend,
+            //    ColorSourceBlend = Blend.InverseDestinationAlpha, //Blend.SourceAlpha, //BlendState.NonPremultiplied.ColorSourceBlend,
+            //};
+
+            BlendState blendState = new BlendState()
+            {
+                BlendFactor = /*Color.White,*/ BlendState.AlphaBlend.BlendFactor,
+                ColorBlendFunction = /*BlendFunction.Add,*/ BlendState.AlphaBlend.ColorBlendFunction,
+                ColorDestinationBlend = Blend.One, /*Blend.DestinationAlpha,*/ //BlendState.AlphaBlend.ColorDestinationBlend,
+                ColorSourceBlend = Blend.InverseDestinationAlpha, /*Blend.InverseDestinationAlpha,*/ //BlendState.AlphaBlend.ColorSourceBlend,
+            };
+            spriteBatch.Begin(SpriteSortMode.Deferred, blendState/*BlendState.NonPremultiplied*/, null, null, null, null, camera.Transform);
+
+            background.Draw(spriteBatch);
+            spriteBatch.End();
 
             camera.BeginDraw(spriteBatch);
 

@@ -15,7 +15,7 @@ namespace Game1
 
         public void Collide(DiskPlayer player)
         {
-            float t = Vector2.Dot(dir, player.position - startPos);
+            float t = Vector2.Dot(dir, player.Position - startPos);
             if (t < 0)
             {
                 startDisk.Collide(player);

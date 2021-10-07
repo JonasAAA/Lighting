@@ -9,6 +9,11 @@ namespace Game1
         private readonly List<Segment> segments;
         private readonly EdgelessPolygon edgelessPoly;
 
+        public static void Initialize(GraphicsDevice GraphicsDevice, Camera camera)
+        {
+            EdgelessPolygon.Initialize(GraphicsDevice, camera);
+        }
+
         public Polygon(List<Vector2> vertices, float radius, Color color)
         {
             segments = new List<Segment>();

@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using System;
 using System.Collections.Generic;
 
@@ -13,6 +14,16 @@ namespace Game1
         private readonly float maxAngleDiff;
         private readonly List<IShadowCastingObject> castObjects;
         private readonly LightPolygon polygon;
+
+        public static void EarlyInitialize(GraphicsDeviceManager graphics)
+        {
+            LightPolygon.EarlyInitialize(graphics);
+        }
+
+        public static void Initialize(GraphicsDevice GraphicsDevice, Camera camera)
+        {
+            LightPolygon.Initialize(GraphicsDevice, camera);
+        }
 
         public Light(Vector2 position, float strength, Color color)
             : this(position, 0, MathHelper.TwoPi, strength, color)
@@ -64,7 +75,7 @@ namespace Game1
                     castObject.InterPoint(position, rayDir, dists);
                 foreach (float dist in dists)
                 {
-                    float d = dist + 1f;
+                    float d = dist/* + 1f*/;
                     if (d >= 0 && d < minDist)
                         minDist = d;
                 }
@@ -77,13 +88,23 @@ namespace Game1
             polygon.Update(position, vertices);
         }
 
+        public static void BeginDraw()
+        {
+            LightPolygon.BeginDraw();
+        }
+
         public void Draw()
         {
             polygon.Draw();
         }
 
+        public static void EndDraw(SpriteBatch spriteBatch)
+        {
+            LightPolygon.EndDraw(spriteBatch);
+        }
+
         private void PrepareAngles(ref List<float> angles)
-        {            
+        {
             for (int i = 0; i < 4; i++)
                 angles.Add(i * MathHelper.TwoPi / 4);
 

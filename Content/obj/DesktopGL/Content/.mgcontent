@@ -4,16 +4,16 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/Jonas/Desktop/Lighting/Content/back.png</File>
-    <File>C:/Users/Jonas/Desktop/Lighting/Content/disk.png</File>
-    <File>C:/Users/Jonas/Desktop/Lighting/Content/exit.png</File>
-    <File>C:/Users/Jonas/Desktop/Lighting/Content/how to play.png</File>
-    <File>C:/Users/Jonas/Desktop/Lighting/Content/new game.png</File>
-    <File>C:/Users/Jonas/Desktop/Lighting/Content/pixel.png</File>
-    <File>C:/Users/Jonas/Desktop/Lighting/Content/random background.png</File>
-    <File>C:/Users/Jonas/Desktop/Lighting/Content/restart.png</File>
-    <File>C:/Users/Jonas/Desktop/Lighting/Content/you lose.png</File>
-    <File>C:/Users/Jonas/Desktop/Lighting/Content/you win.png</File>
+    <File>C:/Users/Jonas/Desktop/home/Lighting/Content/back.png</File>
+    <File>C:/Users/Jonas/Desktop/home/Lighting/Content/disk.png</File>
+    <File>C:/Users/Jonas/Desktop/home/Lighting/Content/exit.png</File>
+    <File>C:/Users/Jonas/Desktop/home/Lighting/Content/how to play.png</File>
+    <File>C:/Users/Jonas/Desktop/home/Lighting/Content/new game.png</File>
+    <File>C:/Users/Jonas/Desktop/home/Lighting/Content/pixel.png</File>
+    <File>C:/Users/Jonas/Desktop/home/Lighting/Content/random background.png</File>
+    <File>C:/Users/Jonas/Desktop/home/Lighting/Content/restart.png</File>
+    <File>C:/Users/Jonas/Desktop/home/Lighting/Content/you lose.png</File>
+    <File>C:/Users/Jonas/Desktop/home/Lighting/Content/you win.png</File>
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />
