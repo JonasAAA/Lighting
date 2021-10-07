@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework.Graphics;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Game1
 {
@@ -31,11 +32,11 @@ namespace Game1
             image.Draw(spriteBatch, Position, rotation);
         }
 
-        public void RelAngles(Vector2 lightPos, List<float> relAngles)
+        public IEnumerable<float> RelAngles(Vector2 lightPos)
         {
             float dist = Vector2.Distance(lightPos, Position);
             if (dist <= radius)
-                return;
+                yield break;
 
             float a = radius / Vector2.Distance(lightPos, Position),
                   b = (float)Math.Sqrt(1 - a * a);
@@ -44,10 +45,12 @@ namespace Game1
                     orth = new Vector2(diff.Y, -diff.X),
                     point1 = center + orth * a * b - lightPos,
                     point2 = center - orth * a * b - lightPos;
-            float angle1 = (float)Math.Atan2(point1.Y, point1.X),
-                  angle2 = (float)Math.Atan2(point2.Y, point2.X);
-            relAngles.Add(angle1);
-            relAngles.Add(angle2);
+            yield return (float)Math.Atan2(point1.Y, point1.X);
+            yield return (float)Math.Atan2(point2.Y, point2.X);
+            //float angle1 = (float)Math.Atan2(point1.Y, point1.X),
+            //      angle2 = (float)Math.Atan2(point2.Y, point2.X);
+            //relAngles.Add(angle1);
+            //relAngles.Add(angle2);
 
             //if (image.color.A != 255)
             //{
@@ -57,7 +60,7 @@ namespace Game1
             //}
         }
 
-        public void InterPoint(Vector2 lightPos, Vector2 lightDir, List<float> interPoints)
+        public IEnumerable<float> InterPoint(Vector2 lightPos, Vector2 lightDir)
         {
             //float dist = Vector2.Distance(lightPos, position);
             //if (dist <= radius)
@@ -66,15 +69,17 @@ namespace Game1
             Vector2 d = lightPos - Position;
             float e = Vector2.Dot(lightDir, d), f = Vector2.Dot(d, d) - radius * radius, g = e * e - f;
             if (g < 0)
-                return;
+                yield break;
 
             float h = (float)Math.Sqrt(g);
 
             if (float.IsNaN(h))
-                return;
+                yield break;
 
-            interPoints.Add(-e + h + 1f);
-            interPoints.Add(-e - h + 1f);
+            yield return -e + h + 1f;
+            yield return -e - h + 1f;
+            //interPoints.Add(-e + h + 1f);
+            //interPoints.Add(-e - h + 1f);
         }
     }
 }

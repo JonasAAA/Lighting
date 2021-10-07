@@ -47,9 +47,12 @@ namespace Game1
 
         public virtual void Update(float elapsed)
         {
+            //the current approach (with IEnumerable) may be less efficient
             List<float> angles = new List<float>();
             foreach (var castObject in castObjects)
-                castObject.RelAngles(position, angles);
+                angles.AddRange(castObject.RelAngles(position));
+            //foreach (var castObject in castObjects)
+            //    castObject.RelAngles(position, angles);
 
             const float small = 0.0001f;
             int oldAngleCount = angles.Count;
@@ -72,7 +75,9 @@ namespace Game1
                 List<float> dists = new List<float>();
                 float minDist = maxDist;
                 foreach (var castObject in castObjects)
-                    castObject.InterPoint(position, rayDir, dists);
+                    dists.AddRange(castObject.InterPoint(position, rayDir));
+                //foreach (var castObject in castObjects)
+                //    castObject.InterPoint(position, rayDir, dists);
                 foreach (float dist in dists)
                 {
                     float d = dist/* + 1f*/;

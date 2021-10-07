@@ -6,9 +6,9 @@ namespace Game1
 {
     public interface IShadowCastingObject
     {
-        void RelAngles(Vector2 lightPos, List<float> relAngles);
+        IEnumerable<float> RelAngles(Vector2 lightPos);
 
-        void InterPoint(Vector2 lightPos, Vector2 lightDir, List<float> interPoints);
+        IEnumerable<float> InterPoint(Vector2 lightPos, Vector2 lightDir);
 
         void Draw(SpriteBatch spriteBatch);
     }

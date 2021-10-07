@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Game1
 {
@@ -30,16 +31,24 @@ namespace Game1
                 segment.Draw(spriteBatch);
         }
 
-        public void RelAngles(Vector2 lightPos, List<float> relAngles)
+        public IEnumerable<float> RelAngles(Vector2 lightPos)
         {
-            foreach (Segment segment in segments)
-                segment.RelAngles(lightPos, relAngles);
+            return
+                from segment in segments
+                from angle in segment.RelAngles(lightPos)
+                select angle;
+            //foreach (Segment segment in segments)
+            //    segment.RelAngles(lightPos, relAngles);
         }
 
-        public void InterPoint(Vector2 lightPos, Vector2 lightDir, List<float> interPoints)
+        public IEnumerable<float> InterPoint(Vector2 lightPos, Vector2 lightDir)
         {
-            foreach (Segment segment in segments)
-                segment.InterPoint(lightPos, lightDir, interPoints);
+            return
+                from segment in segments
+                from interPoint in segment.InterPoint(lightPos, lightDir)
+                select interPoint;
+            //foreach (Segment segment in segments)
+            //    segment.InterPoint(lightPos, lightDir, interPoints);
         }
     }
 }
